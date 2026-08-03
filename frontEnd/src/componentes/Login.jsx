@@ -27,7 +27,7 @@ function Login({ setIsLoggedIn }) {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:3000/api/login", {
+      const res = await fetch("https://gestionados-app.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

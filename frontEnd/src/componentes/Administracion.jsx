@@ -64,7 +64,7 @@ function Administracion({ setIsLoggedIn }) {
     if (!token) return;
 
     try {
-      const resUser = await fetch("http://localhost:3000/api/usuarios", {
+      const resUser = await fetch("https://gestionados-app.onrender.com/api/usuarios", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (resUser.status === 401) {
@@ -76,7 +76,7 @@ function Administracion({ setIsLoggedIn }) {
         setUsuarios(dataUser);
       }
 
-      const resClient = await fetch("http://localhost:3000/api/clientes", {
+      const resClient = await fetch("https://gestionados-app.onrender.com/api/clientes", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (resClient.ok) {
@@ -135,7 +135,7 @@ function Administracion({ setIsLoggedIn }) {
     e.preventDefault();
     setErrorCRUD("");
     try {
-      const res = await fetch("http://localhost:3000/api/usuarios", {
+      const res = await fetch("https://gestionados-app.onrender.com/api/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: JSON.stringify(nuevoUsuario),
@@ -154,7 +154,7 @@ function Administracion({ setIsLoggedIn }) {
         cuerpoPeticion.password = usuarioEditado.password;
       }
 
-      const res = await fetch(`http://localhost:3000/api/usuarios/${id}`, {
+      const res = await fetch(`https://gestionados-app.onrender.com/api/usuarios/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: JSON.stringify(cuerpoPeticion),
@@ -173,7 +173,7 @@ function Administracion({ setIsLoggedIn }) {
   const handleEliminarUsuario = async (id) => {
     if (!window.confirm("¿Eliminar usuario?")) return;
     try {
-      await fetch(`http://localhost:3000/api/usuarios/${id}`, {
+      await fetch(`https://gestionados-app.onrender.com/api/usuarios/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
@@ -185,7 +185,7 @@ function Administracion({ setIsLoggedIn }) {
     e.preventDefault();
     setErrorCRUD("");
     try {
-      const res = await fetch("http://localhost:3000/api/clientes", {
+      const res = await fetch("https://gestionados-app.onrender.com/api/clientes", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: JSON.stringify(nuevoCliente),
@@ -199,7 +199,7 @@ function Administracion({ setIsLoggedIn }) {
 
   const handleGuardarEdicionCliente = async (id) => {
     try {
-      await fetch(`http://localhost:3000/api/clientes/${id}`, {
+      await fetch(`https://gestionados-app.onrender.com/api/clientes/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("token")}` },
         body: JSON.stringify(clienteEditado),
@@ -212,7 +212,7 @@ function Administracion({ setIsLoggedIn }) {
   const handleEliminarCliente = async (id) => {
     if (!window.confirm("¿Eliminar este cliente?")) return;
     try {
-      await fetch(`http://localhost:3000/api/clientes/${id}`, {
+      await fetch(`https://gestionados-app.onrender.com/api/clientes/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
