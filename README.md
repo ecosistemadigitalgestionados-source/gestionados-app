@@ -1,44 +1,25 @@
-# 🛒 Panel de Administración – Centro Comercial Quitus
+# 🚀 Proyecto Web Full-Stack
 
-> Sistema web full-stack desarrollado a medida para la gestión y administración de locales de un centro comercial, optimizado para ofrecer un alto rendimiento, componentes dinámicos y una carga eficiente de recursos multimedia.
-
----
-
-## 🌐 Demo en Producción & Enlaces
-
-* 🔗 **Aplicación Web:** [https://quitus-1.onrender.com](https://quitus-1.onrender.com)
-* 🔗 **Repositorio GitHub:** [https://github.com/dakymales29/Quitus](https://github.com/dakymales29/Quitus)
-
----
-
-## 🚀 Funcionalidades Principales
-
-* 🔐 **Autenticación Segura:** Control de acceso de usuarios mediante JSON Web Tokens (JWT) y encriptación de credenciales con Bcrypt.
-* 👥 **Control de Roles (RBAC):** Gestión de permisos diferenciados entre administrador y usuarios regulares.
-* 🏢 **Gestión de Locales (CRUD):** Administración completa de los locales comerciales del centro comercial.
-* ⚡ **Optimización Multimedia:** Galería de imágenes procesada en formato **WebP** y configurada con carga diferida (`loading="lazy"`) y decodificación asíncrona (`decoding="async"`) para un rendimiento impecable.
-* 📱 **Diseño Responsivo:** Interfaz moderna, limpia y adaptada a cualquier dispositivo gracias a Tailwind CSS.
+> Plataforma web desarrollada a medida con arquitectura Full-Stack, optimizada para ofrecer un alto rendimiento, componentes dinámicos y carga eficiente de recursos multimedia.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-### ⚙️ Backend & Base de Datos
-* **Node.js & Express:** Desarrollo de la API REST.
-* **PostgreSQL:** Base de datos relacional.
-* **JWT & Bcrypt:** Autenticación y seguridad.
-* **Neon:** Alojamiento de la base de datos en la nube.
-* **Render:** Despliegue del servidor en producción.
+### Frontend
+* **Vue.js** (Composition API / SPA)
+* **Vite** (Empaquetador ultra rápido)
+* **Tailwind CSS** (Diseño responsivo y utilitario)
 
-### 💻 Frontend
-* **Vue.js (Composition API):** Estructura dinámica de la SPA.
-* **Vite:** Empaquetador y entorno de desarrollo ultra rápido.
-* **Tailwind CSS:** Estilos visuales responsivos y utilitarios.
+### Backend & Datos
+* **Node.js & Express** (API REST)
+* **PostgreSQL / MySQL** (Gestión de bases de datos)
+* **JWT & RBAC** (Autenticación y control de accesos por roles)
 
 ---
 
-## 📌 Estado del Proyecto
+## ⚡ Características Principales
 
-* ✅ Proyecto funcional
-* ✅ Backend y frontend integrados
-* ✅ Desplegado en producción
+* **Optimización de Multimedia:** Las imágenes de la galería están procesadas en formato **WebP** y configuradas con carga diferida (`loading="lazy"`) y decodificación asíncrona (`decoding="async"`) para garantizar una navegación fluida sin afectar el rendimiento inicial.
+* **Seguridad y Accesos:** Sistema de administración protegido con JSON Web Tokens (JWT) y restricciones de permisos según el rol del usuario.
+* **Diseño Responsivo:** Interfaz adaptada para diferentes tamaños de pantalla con una experiencia de usuario limpia y moderna.
